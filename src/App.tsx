@@ -2,8 +2,8 @@
 function App() {
   return (
     <>
-      <p className="paragraph">Paragraph</p>
-      <h1>Heading 1</h1>
+      <p className="text-3xl bg-red-500">Paragraph</p>
+      <h1 className="text-5xl">Heading 1</h1>
       <h2>Heading</h2>
       <h3>Heading</h3>
       <h4>Heading</h4>

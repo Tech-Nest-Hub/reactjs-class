@@ -1,5 +1,1 @@
-.paragraph{
-  color: red;
-  font-size: large;
-  font-weight: 100px;
-}
+@import "tailwindcss";
