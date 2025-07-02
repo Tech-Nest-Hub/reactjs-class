@@ -1,10 +1,12 @@
-import ShowToDoPage from "./Todo/page/ShowToDoPage"
+import Task1 from "./Week1/Task1"
+import Task2 from "./Week1/Task2"
 
 function App() {
   return (
     <>
-      <main>App</main>
-      <ShowToDoPage name="todo" height={10} size={0} gender={false}/>
+
+    <Task1/>
+<Task2/>
     </>
   )
 }
