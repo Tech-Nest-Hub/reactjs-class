@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button"
 type Props = {}
 
 const AppTaskComp = (props: Props) => {
-  function maClickBhaye(params:type) {
+  function maClickBhaye() {
     alert("Ko garib tichexa")
   }
+
   return (
     <>
     <section>
