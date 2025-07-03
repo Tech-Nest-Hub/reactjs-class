@@ -1,12 +1,15 @@
+import MyApp from "./stuffs/buttons"
+import ShoppingList from "./stuffs/rendering"
 import Task1 from "./Week1/Task1"
 import Task2 from "./Week1/Task2"
 
 function App() {
   return (
     <>
-
-    <Task1/>
-<Task2/>
+      <ShoppingList />
+      <Task1 />
+      <Task2 />
+      <MyApp/>
     </>
   )
 }
