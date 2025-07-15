@@ -19,10 +19,14 @@ type Props = {
     count: number;
     onClick: () => void;
 }
-function MyButton({ count, onClick }: Props) {
+export function MyButton({ count, onClick }: Props) {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} className='bg-green-500 text-white p-2 rounded mx-10'>
       Clicked {count} times
     </button>
   );
 }
+
+
+
+
