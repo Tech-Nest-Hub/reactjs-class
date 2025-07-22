@@ -9,6 +9,13 @@ type Props = {
   id: string;
 }
 
+
+import Task1 from "./Week1/Task1"
+import Task2 from "./Week1/Task2"
+import Home from "./Week1/Home"
+import Task3 from "./Week1/Task3"
+import Task4 from "./Week1/Task4"
+import { BrowserRouter as Router , Routes, Route, Link  } from "react-router-dom";
 function App() {
 const [count, setcount] = useState(5);
 const [data, setData] = useState<Props[]>([]);
@@ -27,16 +34,41 @@ useEffect(() => {
 
 
   return (
+  
+
+
     <>
-    {data.map((item) => (
-      <div key={item.id}>
-        <h2 className="text-3xl">{item.name}</h2>
-        <p>{item.createdAt}</p>
-        <p>{item.avatar}</p>
-      </div>
-    ))}
-    <button className="" onClick={handleFetch}>Fetch call</button>
-    <AppTaskComp/>
+
+      
+      <Router>
+       <div>
+       <nav>
+        <Link to="/Task3">Task3</Link> 
+        <Link to='/Task1'>Task1</Link>
+       <Link to="/Task2">Task2</Link>
+       <Link to="/Task4">Task4</Link>
+       <Link to="/">Home</Link></nav>
+       </div>
+       <Routes>
+
+
+       
+      
+      <Route path="/Task1" element={<Task1/>}></Route>
+      <Route path="/Task4"element={<Task4/>}></Route>
+      <Route path="/Task2" element={<Task2/>}></Route>
+      <Route path="/Task3" element={<Task3/>}></Route>
+      <Route index element={<Home/>}></Route>
+      
+      
+      
+      
+
+      </Routes>
+       
+      </Router>
+     
+      
     </>
   )
 }
