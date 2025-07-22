@@ -22,6 +22,9 @@ const ShowToDoPage = () => {
     setTodos([...todos, {id: Date.now(),text:newTodo, completed: false}])
     setNewTodo('')
   }
+  const editTodo = (id: number): void => {
+    setTodos([...todos, {id: Date.now(),text:newTodo, completed: false}])
+  }
 
   const deleteTodo = (id: number): void => {
     setTodos(todos.filter(todo => todo.id !==id));
@@ -48,7 +51,7 @@ const ShowToDoPage = () => {
       <ul>
         {todos.map(todo=> {
           return(
-            <li key={todo.id} className={todo.completed ? 'bg-red-500' :  "bg-green-500"}>
+            <li key={todo.id} className={todo.completed ? 'bg-red-500' :  "bg-green-500 "}>
             <span>{todo.text}</span>
             <button 
             onClick={()=> deleteTodo(todo.id)} 
