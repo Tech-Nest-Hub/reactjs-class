@@ -1,5 +1,6 @@
 import { use, useEffect, useState } from "react"
 import MyApp, { MyButton } from "./stuffs/buttons"
+import AppTaskComp from "./Todo/components/AppTaskComp";
 
 type Props = {
   createdAt: string;
@@ -35,6 +36,7 @@ useEffect(() => {
       </div>
     ))}
     <button className="" onClick={handleFetch}>Fetch call</button>
+    <AppTaskComp/>
     </>
   )
 }
